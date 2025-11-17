@@ -13,6 +13,7 @@ const { submitAmenityBookingController } = require('../controllers/submitAmenity
 const { fetchUserProfile } = require('../controllers/fetchUserProfile');
 const { fetchMembers } = require('../controllers/fetchMembers');
 const { fetchDocuments } = require('../controllers/fetchDocuments');
+const { fetchAmenityListing } = require('../controllers/amenitySlots');
 
 router.get('/userData/:id', FullBodyController);
 router.get('/fetchInvoices/:id', fetchInvoicesFromDBwithUserId);
@@ -39,5 +40,7 @@ router.get('/fetchMembers/:id/:propertyId',fetchMembers);
 
 // fetch documents
 router.get('/fetchDocuments/:id/:propertyId', fetchDocuments);
+
+router.get('/fetchAmenityListing', fetchAmenityListing);
 
 module.exports = router;
