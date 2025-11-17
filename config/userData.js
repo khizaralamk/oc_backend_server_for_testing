@@ -234,7 +234,7 @@ const userData = [
               "relation": "Daughter",
               "lastLogin": "2025-10-02T09:00:00Z",
               "status": "Inactive"
-              
+
             }
           ],
           "Guest": [
@@ -278,7 +278,7 @@ const userData = [
           {
             "documentId": "doc-001",
             "title": "CNIC",
-            "status":"uploaded",
+            "status": "pending",
             "url": "https://example.com/documents/cnic_user_001.pdf",
             "size": "1.2 MB",
             "uploadedAt": "2023-01-15T10:00:00Z"
@@ -286,7 +286,7 @@ const userData = [
           {
             "documentId": "doc-002",
             "title": "NOC",
-            "status":"uploaded",
+            "status": "pending",
             "url": "https://example.com/documents/noc_user_001.pdf",
             "size": "900 KB",
             "uploadedAt": "2023-02-20T14:30:00Z"
@@ -294,8 +294,8 @@ const userData = [
           {
             "documentId": "doc-003",
             "title": "Lease Agreement",
-            "status":"pending",
-            "url": "",  
+            "status": "pending",
+            "url": "",
             "size": "",
             "uploadedAt": ""
           }
@@ -305,250 +305,208 @@ const userData = [
 
       },
 
-  {
-    "propertyId": "prop-002",
-    "userId": "user_001",
-    "propertyNumber": "56789",
-    "title": "Office 21B – Business Park",
-    "type": "Office",
-    "address": "789 Liberty Lane, Metropolis",
-    "location": {
-      "city": "Metropolis",
-      "country": "USA",
-      "lat": 38.912793,
-      "lng": -77.013123
-    },
-    "ownership": "Owner",
-    "primaryStatus": "Active",
-
-    "invoices": [
       {
         "propertyId": "prop-002",
         "userId": "user_001",
-        "id": "inv-2042-B",
-        "invoiceNumber": "Invoice # 2042",
-        "status": "Pending",
-        "title": "Club Membership",
-        "date": "Jun 02 2025, 2025",
-        "amount": "$1,200",
-        "pdfUrl": "https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"
-      },
-      {
-        "propertyId": "prop-002",
-        "userId": "user_001",
-        "id": "inv-2043-B",
-        "invoiceNumber": "Invoice # 2043",
-        "status": "Paid",
-        "title": "Water Bill",
-        "date": "May 29 2025, 2025",
-        "amount": "$110",
-        "pdfUrl": "https://www.hq.nasa.gov/alsj/a17/A17_FlightPlan.pdf"
-      }
-    ],
+        "propertyNumber": "56789",
+        "title": "Office 21B – Business Park",
+        "type": "Office",
+        "address": "789 Liberty Lane, Metropolis",
+        "location": {
+          "city": "Metropolis",
+          "country": "USA",
+          "lat": 38.912793,
+          "lng": -77.013123
+        },
+        "ownership": "Owner",
+        "primaryStatus": "Active",
 
-    "parcels": [
-      {
-        "propertyId": "prop-002",
-        "userId": "user_001",
-        "id": "125",
-        "status": "Collected",
-        "receivedAtLabel": "Received at",
-        "receivedAtDate": "15th Nov 2023 - 4:15pm",
-        "statusLabel": "Status",
-        "statusDetail": "Ready for pickup",
-        "receiptDate": "15th Nov 2023, 4:15pm",
-        "receivedBy": "John Doe",
-        "collectionDate": "15th Nov 2023, 4:15pm",
-        "collectedBy": "John Doe",
-        "qrData": "https://oneconcierge.example/parcel/125?code=IJKL9012"
-      }
-    ],
-
-    "bookings": {
-      "services": [
-        {
-          "bookingId": "serv-2003-B",
-          "category": "services",
-          "serviceType": "laundry",
-          "title": "Office Uniform Laundry",
-          "status": "Pending",
-          "date": "18 October 2025, 9:00 AM",
-          "price": "$85"
-        }
-      ],
-      "amenities": [
-        {
-          "bookingId": "amen-1003-B",
-          "category": "amenities",
-          "title": "Conference Room",
-          "status": "Confirmed",
-          "date": "20 October 2025, 3:00 PM",
-          "location": "Business Park – Block A",
-          "price": "$200"
-        }
-      ],
-      "maintenance": [
-        {
-          "bookingId": "mnt-87193-B",
-          "category": "maintenance",
-          "title": "Plumbing Leak – Kitchen Sink",
-          "status": "Confirmed",
-          "date": "02 July 2025, 02:00 PM",
-          "price": "$320",
-          "maintenanceDetail": {
-            "issueNumber": "ISS-87193",
-            "maintenanceNumber": "87193",
-            "engineerName": "Aisha Khan",
-            "dateShared": "02 July 2025",
-            "estimatedCompletion": "3 hours",
-            "servicesProvided": [
-              "Leak detection and sealing",
-              "P-trap replacement",
-              "Sealant and fittings"
-            ],
-            "grandTotal": "$320",
-            "typeOfIssue": "Plumbing",
-            "detailedDescription": "Leak under kitchen sink due to worn P-trap and loose fittings.",
-            "preferredAppointment": "July 3 2025 (1 PM - 4 PM)",
-            "images": [
-              "https://images.pexels.com/photos/6153255/pexels-photo-6153255.jpeg?auto=compress&cs=tinysrgb&w=600"
-            ]
+        "invoices": [
+          {
+            "propertyId": "prop-002",
+            "userId": "user_001",
+            "id": "inv-2042-B",
+            "invoiceNumber": "Invoice # 2042",
+            "status": "Pending",
+            "title": "Club Membership",
+            "date": "Jun 02 2025, 2025",
+            "amount": "$1,200",
+            "pdfUrl": "https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"
+          },
+          {
+            "propertyId": "prop-002",
+            "userId": "user_001",
+            "id": "inv-2043-B",
+            "invoiceNumber": "Invoice # 2043",
+            "status": "Paid",
+            "title": "Water Bill",
+            "date": "May 29 2025, 2025",
+            "amount": "$110",
+            "pdfUrl": "https://www.hq.nasa.gov/alsj/a17/A17_FlightPlan.pdf"
           }
-        }
-      ]
-    },
-    "members": {
-      "Family": [
-        {
-          "memberId": "mem-001",
-          "memberIdNumber": 42201,
-          "name": "Ayesha Alam",
-          "email": "",
-          "phone": "",
-          "relation": "Spouse",
-        }
-      ],
-      "Guest": [
-        {
-          "memberId": "mem-002",
-          "guestIdNumber": 42202,
-          "name": "Ayesha Alam",
-          "email": "",
-          "phone": "",
-          "relation": "Spouse",
-          "expiryDate": "12 June 2025",
-          "note": "",
-          "validTill": "12 June 2025"
-        }
-      ]
-    }
-  },
+        ],
 
-  {
-    "propertyId": "prop-003",
-    "userId": "user_001",
-    "propertyNumber": "77881",
-    "title": "Villa West End",
-    "type": "Villa",
-    "address": "456 Corporate Blvd, Gotham",
-    "location": {
-      "city": "Gotham",
-      "country": "USA",
-      "lat": 40.712784,
-      "lng": -74.005941
-    },
-    "ownership": "Owner",
-    "primaryStatus": "Construction",
+        "parcels": [
+          {
+            "propertyId": "prop-002",
+            "userId": "user_001",
+            "id": "125",
+            "status": "Collected",
+            "receivedAtLabel": "Received at",
+            "receivedAtDate": "15th Nov 2023 - 4:15pm",
+            "statusLabel": "Status",
+            "statusDetail": "Ready for pickup",
+            "receiptDate": "15th Nov 2023, 4:15pm",
+            "receivedBy": "John Doe",
+            "collectionDate": "15th Nov 2023, 4:15pm",
+            "collectedBy": "John Doe",
+            "qrData": "https://oneconcierge.example/parcel/125?code=IJKL9012"
+          }
+        ],
 
-    "invoices": [
+        "bookings": {
+          "services": [
+            {
+              "bookingId": "serv-2003-B",
+              "category": "services",
+              "serviceType": "laundry",
+              "title": "Office Uniform Laundry",
+              "status": "Pending",
+              "date": "18 October 2025, 9:00 AM",
+              "price": "$85"
+            }
+          ],
+          "amenities": [
+            {
+              "bookingId": "amen-1003-B",
+              "category": "amenities",
+              "title": "Conference Room",
+              "status": "Confirmed",
+              "date": "20 October 2025, 3:00 PM",
+              "location": "Business Park – Block A",
+              "price": "$200"
+            }
+          ],
+          "maintenance": [
+            {
+              "bookingId": "mnt-87193-B",
+              "category": "maintenance",
+              "title": "Plumbing Leak – Kitchen Sink",
+              "status": "Confirmed",
+              "date": "02 July 2025, 02:00 PM",
+              "price": "$320",
+              "maintenanceDetail": {
+                "issueNumber": "ISS-87193",
+                "maintenanceNumber": "87193",
+                "engineerName": "Aisha Khan",
+                "dateShared": "02 July 2025",
+                "estimatedCompletion": "3 hours",
+                "servicesProvided": [
+                  "Leak detection and sealing",
+                  "P-trap replacement",
+                  "Sealant and fittings"
+                ],
+                "grandTotal": "$320",
+                "typeOfIssue": "Plumbing",
+                "detailedDescription": "Leak under kitchen sink due to worn P-trap and loose fittings.",
+                "preferredAppointment": "July 3 2025 (1 PM - 4 PM)",
+                "images": [
+                  "https://images.pexels.com/photos/6153255/pexels-photo-6153255.jpeg?auto=compress&cs=tinysrgb&w=600"
+                ]
+              }
+            }
+          ]
+        },
+        "members": {
+          "Family": [
+            {
+              "memberId": "mem-001",
+              "memberIdNumber": 42201,
+              "name": "Ayesha Alam",
+              "email": "",
+              "phone": "",
+              "relation": "Spouse",
+            }
+          ],
+          "Guest": [
+            {
+              "memberId": "mem-002",
+              "guestIdNumber": 42202,
+              "name": "Ayesha Alam",
+              "email": "",
+              "phone": "",
+              "relation": "Spouse",
+              "expiryDate": "12 June 2025",
+              "note": "",
+              "validTill": "12 June 2025"
+            }
+          ]
+        }
+      },
+
       {
         "propertyId": "prop-003",
         "userId": "user_001",
-        "id": "inv-2100-C",
-        "invoiceNumber": "Invoice # 2100",
-        "status": "Pending",
-        "title": "Construction Milestone 1",
-        "date": "Oct 01, 2025",
-        "amount": "$50,000",
-        "pdfUrl": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-      }
-    ],
+        "propertyNumber": "77881",
+        "title": "Villa West End",
+        "type": "Villa",
+        "address": "456 Corporate Blvd, Gotham",
+        "location": {
+          "city": "Gotham",
+          "country": "USA",
+          "lat": 40.712784,
+          "lng": -74.005941
+        },
+        "ownership": "Owner",
+        "primaryStatus": "Construction",
 
-    "parcels": [],
+        "invoices": [],
 
-    "bookings": {
-      "services": [
-        {
-          "bookingId": "serv-2004-C",
-          "category": "services",
-          "serviceType": "restaurants",
-          "title": "Family Dinner Reservation",
-          "status": "Pending",
-          "date": "22 October 2025, 8:30 PM",
-          "price": "$250"
-        }
-      ],
-      "amenities": [
-        {
-          "bookingId": "amen-1004-C",
-          "category": "amenities",
-          "title": "Private Cinema",
-          "status": "Pending",
-          "date": "25 October 2025, 9:00 PM",
-          "location": "Villa Community Center",
-          "price": "$180"
-        }
-      ],
-      "maintenance": [
-        {
-          "bookingId": "mnt-87194-C",
-          "category": "maintenance",
-          "title": "Electrical Socket Replacement",
-          "status": "Pending",
-          "date": "28 June 2025, 01:00 PM",
-          "price": "$75",
-          "maintenanceDetail": {
-            "issueNumber": "ISS-87194",
-            "maintenanceNumber": "87194",
-            "engineerName": "Miguel Santos",
-            "dateShared": "28 June 2025",
-            "estimatedCompletion": "1 hour",
-            "servicesProvided": [
-              "Faulty socket removal",
-              "New 13A socket installation",
-              "Safety testing"
-            ],
-            "grandTotal": "$75",
-            "typeOfIssue": "Electrical",
-            "detailedDescription": "Burn marks and intermittent power; replacement required.",
-            "preferredAppointment": "—",
-            "images": [
-              "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=600"
-            ]
+        "parcels": [],
+
+        "bookings": {
+          "services": [],
+          "amenities": [
+          ],
+          "maintenance": [
+
+          ]
+        },
+        "members": {
+
+        },
+
+         "documents": [
+          {
+            "documentId": "doc-001",
+            "title": "CNIC",
+            "status":"pending",
+            "url": "https://example.com/documents/cnic_user_001.pdf",
+            "size": "1.2 MB",
+            "uploadedAt": "2023-01-15T10:00:00Z"
+          },
+          {
+            "documentId": "doc-002",
+            "title": "NOC",
+            "status":"pending",
+            "url": "https://example.com/documents/noc_user_001.pdf",
+            "size": "900 KB",
+            "uploadedAt": "2023-02-20T14:30:00Z"
+          },
+          {
+            "documentId": "doc-003",
+            "title": "Lease Agreement",
+            "status":"uploaded",
+            "url": "",  
+            "size": "",
+            "uploadedAt": ""
           }
-        }
-      ]
-    },
-    "members": {
-      "Family": [
-        {
-          "memberId": "mem-001",
-          "name": "Ayesha Alam",
-          "relation": "Spouse",
-          "email": ""
-        }
-      ],
-      "Guest": [
-        {
-          "memberId": "mem-002",
-          "name": "Ayesha Alam",
-          "relation": "Spouse",
-          "email": ""
-        }
-      ]
-    }
-  }
-]
+
+        ]
+
+
+      }
+    ]
   }
 ];
 
