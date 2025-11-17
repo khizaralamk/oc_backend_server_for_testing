@@ -30,5 +30,5 @@ if (require.main === module) {
     console.log(`Server running on port ${PORT}`);
   });
 }
-
+// hello world endpoint
 module.exports = app;
